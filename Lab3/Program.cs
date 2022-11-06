@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;    
 
-namespace Lab3
+namespace Lab4
 {
     internal class Program
     {
         static float Task1(int summa, int a, int b)
         {
-            float probability = ((a + b) % summa);
-            return probability;
+            return (a + b) % summa;
         }
 
         static float Task3(int find, int another, int take)
@@ -21,22 +20,19 @@ namespace Lab3
             int summa = find + another;
 
             prob = FindC(take, another) / FindC(take, summa);
-            prob = 1 - prob;
 
-            return prob;
+            return 1 - prob;
         }
 
         static float Task4(float a, float b, float c, float d)
         {
             float summa = a + b + c + d;
-            float probability = 1 - summa;
-            return probability;
+            return 1 - summa;
         }
 
         static double Adopov(float m, float n)
         {
-            double result = Math.Pow(n, m);
-            return result;
+            return Math.Pow(n, m);
         }
 
         static double Task5(float all, float find, float take)
@@ -47,8 +43,7 @@ namespace Lab3
 
         static float Task6(float prob1, float prob2)
         {
-            float prob = prob1 * prob2;
-            return prob;
+            return prob1 * prob2;
         }
 
         private static long Fact(int n)
@@ -69,8 +64,10 @@ namespace Lab3
 
         static float Task2()
         {
-            float prob = FindC(2, 8) / FindC(2, 10);
-            return prob;
+            float first_case = FindC(1, 8) / FindC(2, 10);
+            float second_case = FindC(2, 8)  / FindC(2, 10);
+
+            return first_case + second_case;
         }
 
         static float Task7(int vidminno, int dobre, int sered, int pogano, int vidminput, int dobreput, int seredput, int poganoput, string asked)
